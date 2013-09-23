@@ -4,4 +4,4 @@ before_script:
   - hdiutil mount flashplayer.dmg  
   - cp -R "/Volumes/Flash Player/Flash Player.app" /Users/travis/build/bclwhitaker/tas/
   - hdiutil unmount "/Volumes/Flash Player/"
-script: mvn test -DflashPlayer.command=~/Flash\ Player.app/Contents/MacOS/Flash\ Player\ Debugger
+script: mvn test -DflashPlayer.command=/Users/travis/build/bclwhitaker/tas/Flash\ Player.app/Contents/MacOS/Flash\ Player\ Debugger
