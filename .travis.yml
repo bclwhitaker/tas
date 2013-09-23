@@ -2,6 +2,6 @@ language: objective-c
 before_script:
   - curl http://download.macromedia.com/pub/flashplayer/updaters/11/flashplayer_11_7_sa_debug.dmg >> flashplayer.dmg
   - hdiutil mount flashplayer.dmg  
-  - sudo cp -R "/Volumes/Flash Player/Flash Player.app" ~
+  - cp -R "/Volumes/Flash Player/Flash Player.app" /Users/travis/build/bclwhitaker/tas/
   - hdiutil unmount "/Volumes/Flash Player/"
 script: mvn test -DflashPlayer.command=~/Flash\ Player.app/Contents/MacOS/Flash\ Player\ Debugger
